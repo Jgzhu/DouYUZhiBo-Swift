@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0EAC07C61DE29C3200E9B97D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAC07C51DE29C3200E9B97D /* AppDelegate.swift */; };
-		0EAC07C81DE29C3200E9B97D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAC07C71DE29C3200E9B97D /* ViewController.swift */; };
-		0EAC07CB1DE29C3200E9B97D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EAC07C91DE29C3200E9B97D /* Main.storyboard */; };
 		0EAC07CD1DE29C3200E9B97D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EAC07CC1DE29C3200E9B97D /* Assets.xcassets */; };
 		0EAC07D01DE29C3200E9B97D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EAC07CE1DE29C3200E9B97D /* LaunchScreen.storyboard */; };
 		0EAC07DB1DE29C3200E9B97D /* DouYUZhiBo_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAC07DA1DE29C3200E9B97D /* DouYUZhiBo_SwiftTests.swift */; };
@@ -36,8 +34,6 @@
 /* Begin PBXFileReference section */
 		0EAC07C21DE29C3200E9B97D /* DouYUZhiBo-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DouYUZhiBo-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EAC07C51DE29C3200E9B97D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0EAC07C71DE29C3200E9B97D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		0EAC07CA1DE29C3200E9B97D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0EAC07CC1DE29C3200E9B97D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0EAC07CF1DE29C3200E9B97D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0EAC07D11DE29C3200E9B97D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -98,8 +94,6 @@
 			isa = PBXGroup;
 			children = (
 				0EAC07C51DE29C3200E9B97D /* AppDelegate.swift */,
-				0EAC07C71DE29C3200E9B97D /* ViewController.swift */,
-				0EAC07C91DE29C3200E9B97D /* Main.storyboard */,
 				0EAC07CC1DE29C3200E9B97D /* Assets.xcassets */,
 				0EAC07CE1DE29C3200E9B97D /* LaunchScreen.storyboard */,
 				0EAC07D11DE29C3200E9B97D /* Info.plist */,
@@ -237,7 +231,6 @@
 			files = (
 				0EAC07D01DE29C3200E9B97D /* LaunchScreen.storyboard in Resources */,
 				0EAC07CD1DE29C3200E9B97D /* Assets.xcassets in Resources */,
-				0EAC07CB1DE29C3200E9B97D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,7 +255,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0EAC07C81DE29C3200E9B97D /* ViewController.swift in Sources */,
 				0EAC07C61DE29C3200E9B97D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,14 +291,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		0EAC07C91DE29C3200E9B97D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0EAC07CA1DE29C3200E9B97D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		0EAC07CE1DE29C3200E9B97D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -512,6 +496,7 @@
 				0EAC07EC1DE29C3200E9B97D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0EAC07ED1DE29C3200E9B97D /* Build configuration list for PBXNativeTarget "DouYUZhiBo-SwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +505,7 @@
 				0EAC07EF1DE29C3200E9B97D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0EAC07F01DE29C3200E9B97D /* Build configuration list for PBXNativeTarget "DouYUZhiBo-SwiftUITests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +514,7 @@
 				0EAC07F21DE29C3200E9B97D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
