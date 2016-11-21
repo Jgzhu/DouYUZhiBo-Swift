@@ -12,13 +12,35 @@ class HomeViewController: UIViewController {
 
     fileprivate lazy var pageTitleview: PageTitleView = {
         let TitleviewFrame = CGRect(x: 0, y: 64, width: UIScreen.main.bounds.width, height: 44)
-        let titles = ["推荐","游戏","娱乐","趣玩"]
+        let titles = ["推荐","游戏","娱乐","趣玩","测试"]
     let pageTitleview = PageTitleView(frame: TitleviewFrame, titles: titles)
-       // pageTitleview.backgroundColor = UIColor.gray
+       pageTitleview.delegate = self
     return pageTitleview
     }()
     
-    
+    fileprivate lazy var pageContentView: PageContentView = {
+        let PCViewFrame = CGRect(x: 0, y: 64+44, width: UIScreen.main.bounds.width, height: self.view.frame.size.height-64-44-(self.tabBarController?.tabBar.frame.size.height)!)
+        let VC1 = UIViewController()
+        VC1.view.backgroundColor = UIColor.yellow
+        
+        let VC2 = UIViewController()
+        VC2.view.backgroundColor = UIColor.blue
+        
+        let VC3 = UIViewController()
+        VC3.view.backgroundColor = UIColor.cyan
+        
+        let VC4 = UIViewController()
+        VC4.view.backgroundColor = UIColor.magenta
+        
+        let VC5 = UIViewController()
+        VC5.view.backgroundColor = UIColor.purple
+        
+        let ContentVC: [UIViewController] = [VC1,VC2,VC3,VC4,VC5]
+        
+       let PCView = PageContentView(frame: PCViewFrame, ContentVC: ContentVC)
+        PCView.delegate = self
+    return PCView
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -44,7 +66,8 @@ extension HomeViewController{
         SetNavItem()
     //设置titleView
      view.addSubview(pageTitleview)
-    
+    //设置ContentView
+    view.addSubview(pageContentView)
     }
     
     private func SetNavItem(){
@@ -64,6 +87,19 @@ extension HomeViewController{
     
 }
 
+extension HomeViewController:PageTitleViewDelegate{
+    func pageTitleViewClick(titleView: PageTitleView, selectIndex: Int) {
+        print("\(selectIndex)")
+        pageContentView.ScrollToPageContent(selectindex: selectIndex)
+    }
 
+}
 
+extension HomeViewController:PageContentViewDelegate{
+    func PageContentScroll(souceIndex: Int, targetIndex: Int, progress: CGFloat) {
+        pageTitleview.ScrollTitle(souceIndex: souceIndex, targetIndex: targetIndex, progress: progress)
+      // print("原始\(souceIndex)----目标\(targetIndex)---比例\(progress)")
+    }
+
+}
 
