@@ -20,8 +20,8 @@ class HomeViewController: UIViewController {
     
     fileprivate lazy var pageContentView: PageContentView = {
         let PCViewFrame = CGRect(x: 0, y: 64+44, width: UIScreen.main.bounds.width, height: self.view.frame.size.height-64-44-(self.tabBarController?.tabBar.frame.size.height)!)
-        let VC1 = UIViewController()
-        VC1.view.backgroundColor = UIColor.yellow
+        let RecommendVC = RecommendViewController()
+        //RecommendVC.view.backgroundColor = UIColor.yellow
         
         let VC2 = UIViewController()
         VC2.view.backgroundColor = UIColor.blue
@@ -35,7 +35,7 @@ class HomeViewController: UIViewController {
         let VC5 = UIViewController()
         VC5.view.backgroundColor = UIColor.purple
         
-        let ContentVC: [UIViewController] = [VC1,VC2,VC3,VC4,VC5]
+        let ContentVC: [UIViewController] = [RecommendVC,VC2,VC3,VC4,VC5]
         
        let PCView = PageContentView(frame: PCViewFrame, ContentVC: ContentVC)
         PCView.delegate = self

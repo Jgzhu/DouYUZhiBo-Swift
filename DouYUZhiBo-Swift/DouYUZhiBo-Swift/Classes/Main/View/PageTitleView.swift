@@ -101,8 +101,10 @@ extension PageTitleView{
     //点击title
     @objc private func titleLabelClick(_ tap: UITapGestureRecognizer) {
         print("\(tap.view?.tag)")
+        
         guard let tapview = tap.view else{return}
         let index = tapview.tag
+        if index==currentIndex {return}
         ScrollTitle(souceIndex: currentIndex, targetIndex: index, progress: 1)
         delegate?.pageTitleViewClick(titleView: self, selectIndex: index)
     }

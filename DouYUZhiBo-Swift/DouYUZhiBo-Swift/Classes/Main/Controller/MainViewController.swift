@@ -16,6 +16,7 @@ class MainViewController: UITabBarController {
         addChildVcWithStoryboardName(name: "Live");
         addChildVcWithStoryboardName(name: "Follow");
         addChildVcWithStoryboardName(name: "Profile");
+        self.tabBar.tintColor = UIColor.orange
         
     }
    

@@ -1,0 +1,6 @@
+framework module Pods_DouYUZhiBo_SwiftTests {
+  umbrella header "Pods-DouYUZhiBo-SwiftTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
