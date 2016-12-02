@@ -59,6 +59,10 @@
                 <constraint firstItem="dFM-f2-coA" firstAttribute="top" secondItem="4u4-TX-sF5" secondAttribute="bottom" constant="4" id="pGi-nk-TMK"/>
                 <constraint firstAttribute="bottom" secondItem="mL6-Mq-hMF" secondAttribute="bottom" constant="10" id="seF-d4-YMH"/>
             </constraints>
+            <connections>
+                <outlet property="headimageview" destination="mL6-Mq-hMF" id="dVN-ev-nTx"/>
+                <outlet property="headtitleLbel" destination="PSE-XO-Tk1" id="ztT-b0-3iC"/>
+            </connections>
             <point key="canvasLocation" x="26" y="51"/>
         </collectionReusableView>
     </objects>

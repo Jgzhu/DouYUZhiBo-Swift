@@ -38,6 +38,7 @@ class RecommendViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         SetUI()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -56,37 +57,41 @@ extension RecommendViewController{
     collectionview.backgroundColor = UIColor.white
       RecommentVM.requestData { 
         print("---")
+        self.collectionview.reloadData()
         }
     }
 }
 //UICollectionViewDataSource数据源
 extension RecommendViewController:UICollectionViewDataSource{
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 12
+        return RecommentVM.RecommendGroup.count
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if section==0 {
-            return 8
-        }
-        return 4
+//        if section==0 {
+//            return 8
+//        }
+        return RecommentVM.RecommendGroup[section].RecomModel.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        var cell = UICollectionViewCell()
+        //var cell = UICollectionViewCell()
         
         if indexPath.section==1 {
-            cell = (collectionview.dequeueReusableCell(withReuseIdentifier: kPrettyCellID, for: indexPath) as? RecommentPrettyCell)!
+           let cell = collectionview.dequeueReusableCell(withReuseIdentifier: kPrettyCellID, for: indexPath) as! RecommentPrettyCell
             cell.backgroundColor = UIColor.white
-    
-        }else{
-        cell = (collectionview.dequeueReusableCell(withReuseIdentifier: kNormalCellID, for: indexPath) as?RecommentNormalCell)!
-        cell.backgroundColor = UIColor.white
-        
-        }
+        cell.PreCellRecomModel = RecommentVM.RecommendGroup[indexPath.section].RecomModel[indexPath.item]
         return cell
+        }else{
+       let cell = (collectionview.dequeueReusableCell(withReuseIdentifier: kNormalCellID, for: indexPath) as?RecommentNormalCell)!
+        cell.backgroundColor = UIColor.white
+            cell.NormCellRecomModel = RecommentVM.RecommendGroup[indexPath.section].RecomModel[indexPath.item]
+        return cell
+        }
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let headerview = collectionview.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kHeaderID, for: indexPath)
+        let headerview = collectionview.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kHeaderID, for: indexPath) as!RecommentCollectionHeaderView
+        headerview.HeaderRecomGroupModel = RecommentVM.RecommendGroup[indexPath.section]
         return headerview
     }
 }

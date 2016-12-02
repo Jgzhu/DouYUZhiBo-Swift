@@ -9,7 +9,16 @@
 import UIKit
 
 class RecommentCollectionHeaderView: UICollectionReusableView {
-
+    @IBOutlet weak var headimageview: UIImageView!
+    @IBOutlet weak var headtitleLbel: UILabel!
+    var HeaderRecomGroupModel:RecommendGroupModel?{
+        didSet{
+        headtitleLbel.text = HeaderRecomGroupModel?.tag_name
+        headimageview.image = UIImage(named: (HeaderRecomGroupModel?.name_icon)!)
+        }
+    
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

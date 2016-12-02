@@ -83,6 +83,13 @@
                 <constraint firstAttribute="bottom" secondItem="5yA-DL-PXL" secondAttribute="bottom" constant="8" id="vTS-e9-e9y"/>
             </constraints>
             <size key="customSize" width="221" height="139"/>
+            <connections>
+                <outlet property="headimageview" destination="5sv-HJ-n4w" id="ZQD-9S-QSP"/>
+                <outlet property="iconImageView" destination="zmn-jI-Dao" id="5oJ-Ts-HaY"/>
+                <outlet property="nickNameLabel" destination="mU0-B6-oEq" id="wN4-Hd-sEE"/>
+                <outlet property="onlineBtn" destination="K3S-Yi-rIV" id="L6B-gf-w5t"/>
+                <outlet property="roomNameLabel" destination="5yA-DL-PXL" id="ior-AI-nZY"/>
+            </connections>
             <point key="canvasLocation" x="22.5" y="-11.5"/>
         </collectionViewCell>
     </objects>

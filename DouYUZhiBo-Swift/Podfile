@@ -17,4 +17,5 @@ target 'DouYUZhiBo-Swift' do
     # Pods for testing
   end
 pod 'Alamofire'
+pod 'Kingfisher'
 end
